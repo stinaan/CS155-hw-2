@@ -1,0 +1,66 @@
+package hw2;
+
+/**
+ * 
+ * Java 8.0 API. 
+ * @author: Suneuy Kim
+ */
+
+import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class AtmTester
+{
+        public static void main(String [] args) throws FileNotFoundException
+        {
+        	
+        	
+        	
+        		BankSystem.loadAccounts();
+                Scanner sc = new Scanner(System.in);
+                
+                userPrompt(sc);
+                
+                
+
+                
+         }
+        
+        public static void userPrompt(Scanner sc)
+        { System.out.print("Please select an ATM [1] [2] [3] [4]");
+        	while (sc.hasNextLine())
+                {
+                        String input = sc.nextLine();
+                        
+                        System.out.println("Please enter card number:");
+                        
+                        String cardNumberInput = sc.nextLine();
+         
+                    	
+                        if (input.equals("1")||input.equals("2"))//bankA
+                        {
+                        	if (BankSystem.loadBankA(cardNumberInput).equals(null))
+                        	{
+                        		System.out.println("This bank does not have this card account.");
+                        		userPrompt(sc);
+                        	}
+                        	
+                        }
+                        else if (input.equals("3") || input.equals("4")) //bankB
+                        {
+                        	
+                        }
+                        else
+                        {
+                        	System.out.println("There is no bank with that name.");
+                        }
+                }
+        }
+}
+       
+        
+        
+
+
