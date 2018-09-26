@@ -22,17 +22,17 @@ public String getBankID()
 	return bankID;
 }
 
-public  String getPassword()
+public static String getPassword()
 {
 	return password;
 }
 
-public  String getExpDate()
+public static String getExpDate()
 {
 	return expirationDate;
 }
 
-public  String getAmount()
+public static String getAmount()
 {
 	return moneyAmount;
 }

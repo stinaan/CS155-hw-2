@@ -49,7 +49,7 @@ public class AtmTester
                         	}
                         	else
                         	{
-                        		Account a = BankSystem.checkBankB(cardNumberInput);
+                        		Account a = BankSystem.checkBankA(cardNumberInput);
                         		ATMSystem.verification(a);
                         		if(ATMSystem.checkExpDate()==false)
                         			{
@@ -68,30 +68,9 @@ public class AtmTester
                         }
                         else if (input.equals("3") || input.equals("4")) //bankB
                         {
-                        	  System.out.println("Please enter card number:");
-                       	   String cardNumberInput = sc.nextLine();
-                       	if (BankSystem.checkBankB(cardNumberInput).equals(null))
-                       	{
-                       		System.out.println("This bank does not have this card account.");
-                       		authorizationDialog(sc);
-                       	}
-                       	else
-                       	{
-                       		Account a = BankSystem.checkBankB(cardNumberInput);
-                       		ATMSystem.verification(a);
-                       		if(ATMSystem.checkExpDate()==false)
-                       			{
-                       				System.out.println("The card is expired. Please use another card.");
-                       				authorizationDialog(sc);
-                       			}
-                       		System.out.println("Please enter password [4 digit pincode]");
-                       		input = sc.nextLine();
-                       		if(ATMSystem.checkPassword(input)==false)
-                       			{
-                       				System.out.println("The password is wrong.");
-                       				authorizationDialog(sc);
-                       			}
-                       	}
+                        	   System.out.println("Please enter card number:");
+                        	   String cardNumberInput = sc.nextLine();
+                        	
                         }
                         else
                         {

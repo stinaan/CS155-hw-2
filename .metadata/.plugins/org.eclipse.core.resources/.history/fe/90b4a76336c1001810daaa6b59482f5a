@@ -65,29 +65,6 @@ public class BankSystem {
 		return null;
 	}
 	
-	public static Account checkBankB(String cardNum)
-	{
-		
-			System.out.println("1");
-			for(int i = 0; i<bankBList.size(); i++)
-			{
-				System.out.println("2");
-				String id = bankBList.get(i).getBankID();
-				System.out.println(id);
-				System.out.println(cardNum);
-				if (cardNum.compareTo(id)==0)
-				{
-					System.out.println("3");
-					moneyInBank = Integer.parseInt(bankBList.get(i).getAmount());
-							
-					return bankBList.get(i);
-				}
-			}
-			
-		
-		return null;
-	}
-	
 	public static Integer getMoneyInBank()
 	{
 		return moneyInBank;

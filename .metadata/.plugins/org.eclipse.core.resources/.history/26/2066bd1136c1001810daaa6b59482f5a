@@ -2,10 +2,10 @@ package hw2;
 
 
 public class Account {
-public String bankID;
-public String expirationDate;
-public String password;
-public String moneyAmount;
+public static String bankID;
+public static String expirationDate;
+public static String password;
+public static String moneyAmount;
 
 
 public Account(String bankNum, String expDate, String pw, String amount)
@@ -22,17 +22,17 @@ public String getBankID()
 	return bankID;
 }
 
-public  String getPassword()
+public static String getPassword()
 {
 	return password;
 }
 
-public  String getExpDate()
+public static String getExpDate()
 {
 	return expirationDate;
 }
 
-public  String getAmount()
+public static String getAmount()
 {
 	return moneyAmount;
 }

@@ -70,14 +70,14 @@ public class AtmTester
                         {
                         	  System.out.println("Please enter card number:");
                        	   String cardNumberInput = sc.nextLine();
-                       	if (BankSystem.checkBankB(cardNumberInput).equals(null))
+                       	if (BankSystem.checkBankA(cardNumberInput).equals(null))
                        	{
                        		System.out.println("This bank does not have this card account.");
                        		authorizationDialog(sc);
                        	}
                        	else
                        	{
-                       		Account a = BankSystem.checkBankB(cardNumberInput);
+                       		Account a = BankSystem.checkBankA(cardNumberInput);
                        		ATMSystem.verification(a);
                        		if(ATMSystem.checkExpDate()==false)
                        			{

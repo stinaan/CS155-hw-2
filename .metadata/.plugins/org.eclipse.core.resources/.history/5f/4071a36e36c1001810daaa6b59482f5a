@@ -80,7 +80,7 @@ public class BankSystem {
 					System.out.println("3");
 					moneyInBank = Integer.parseInt(bankBList.get(i).getAmount());
 							
-					return bankBList.get(i);
+					return bankBlist.get(i);
 				}
 			}
 			
