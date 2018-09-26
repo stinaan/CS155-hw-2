@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;hw2.AtmTester.userPrompt(...)&apos; to &apos;authorizationDialog&apos;&#x0D;&#x0A;- Original project: &apos;hw2&apos;&#x0D;&#x0A;- Original element: &apos;hw2.AtmTester.userPrompt(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;hw2.AtmTester.authorizationDialog(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;userPrompt&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;hw2{AtmTester.java[AtmTester~userPrompt~QScanner;" name="authorizationDialog" references="true" stamp="1537902400358" version="1.0"/>
+</session>

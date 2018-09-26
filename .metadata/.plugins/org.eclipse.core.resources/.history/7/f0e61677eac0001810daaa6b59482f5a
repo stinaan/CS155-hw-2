@@ -1,0 +1,42 @@
+package hw2;
+import java.util.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+public class ATMSystem {
+	public static Account acc;
+	
+	
+	public static void verification(Account a)
+	{
+		acc = a;
+		checkExpDate();
+	}
+	public static void checkExpDate()
+	{
+		String expDate = acc.getExpDate();
+		String[] split = expDate.split("/");
+
+		int month = Integer.parseInt(split[0]);
+		String year = split[1];
+		
+		
+		LocalDate c = LocalDate.now();
+		String m = Integer.toString(c.getMonthValue());
+		String y = Integer.toString(c.getYear());
+		String current = (m+"/"+y);
+		
+		if ((current.compareTo(expDate))!=0)
+		{
+			System.out.println("The card is expired.");
+			return;
+		}
+	}
+	public static void checkPassword()
+	{
+		
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,90 @@
+package hw2;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
+public class BankSystem {
+	public static ArrayList<Account> bankAList = new ArrayList<Account>();
+	public static ArrayList<Account> bankBList = new ArrayList<Account>();
+	public static Integer moneyInBank;
+	public BankSystem()
+	{
+		
+	}
+	
+	public static void loadAccounts() throws FileNotFoundException
+	{
+		File file = new File("cardList.txt");
+		Scanner fin = new Scanner(file);
+		while(fin.hasNextLine())
+		{
+			String line = fin.nextLine();
+			if(line.equals("A"))
+			{
+				Account acc = new Account(fin.nextLine(),fin.nextLine(),fin.nextLine(),fin.nextLine());
+				bankAList.add(acc);
+				System.out.println(bankAList.get(0).getBankID());
+				System.out.println(line);
+			}
+			else if(line.equals("B"))
+			{
+				Account acc = new Account(fin.nextLine(),fin.nextLine(),fin.nextLine(), fin.nextLine());
+				bankBList.add(acc);
+				System.out.println(line);
+			}
+		}
+		System.out.println("a"+bankAList.size());
+		System.out.println("b"+bankBList.size());
+		System.out.println(bankAList.get(0).getBankID());
+
+		System.out.println(bankBList.get(0).getBankID());
+		fin.close();
+		return;
+	}
+	
+	
+	public static Account checkBankA(String cardNum)
+	{
+		
+			System.out.println("1");
+			for(int i = 0; i<bankAList.size(); i++)
+			{
+				System.out.println("2");
+				String id = bankAList.get(i).getBankID();
+				System.out.println(id);
+				System.out.println(cardNum);
+				if (cardNum.compareTo(id)==0)
+				{
+					System.out.println("3");
+					moneyInBank = Integer.parseInt(Account.getAmount());
+							
+					return bankAList.get(i);
+				}
+			}
+			
+		
+		return null;
+	}
+	
+	public static Integer getMoneyInBank()
+	{
+		return moneyInBank;
+	}
+	
+	public static void withdraw(Integer amount)
+	{
+		moneyInBank = moneyInBank-amount;
+	}
+	
+	
+	
+
+
+
+
+
+
+
+}
+
+
+

@@ -1,0 +1,28 @@
+package hw2;
+import java.util.*;
+public class ATMSystem {
+	public static Account acc;
+	
+	
+	public static void verification(Account a)
+	{
+		acc = a;
+	}
+	public static void checkExpDate(String e)
+	{
+		String expDate = acc.getExpDate();
+		
+		if (expDate.compareTo(e)==false)
+		{
+			
+		}
+	}
+	public static void checkPassword()
+	{
+		
+	}
+	
+	
+	
+
+}
